@@ -5,9 +5,10 @@ from django.conf.urls import patterns, include, url
 # admin.autodiscover()
 
 urlpatterns = patterns('',
+    (r'^$', 'django.views.generic.simple.direct_to_template', {'template': 'home.html'}),
     # Examples:
-    # url(r'^$', 'quickstart.views.home', name='home'),
-    # url(r'^quickstart/', include('quickstart.foo.urls')),
+    # url(r'^$', 'hellodjango.views.home', name='home'),
+    # url(r'^hellodjango/', include('hellodjango.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
